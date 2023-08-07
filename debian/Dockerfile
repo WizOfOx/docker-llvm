@@ -4,6 +4,8 @@ ARG DEBIAN_VERSION=stable-slim
 ARG LLVM_VERSION=16.0.0
 FROM debian:${DEBIAN_VERSION}
 
+ENV LLVM_VERSION=${LLVM_VERSION:-16.0.0}
+
 RUN apt update && \
     apt install -y \
         curl gnupg lsb-release \

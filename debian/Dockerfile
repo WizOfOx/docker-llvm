@@ -11,7 +11,7 @@ RUN apt update && \
         pkg-config libeigen3-dev ninja-build \
         gcc-12 g++-12 
 
-ADD https://github.com/llvm/llvm-project.git#llvmorg-${LLVM_VERSION} /llvm
+ADD "https://github.com/llvm/llvm-project.git#llvmorg-$LLVM_VERSION" /llvm
 
 RUN cmake -S /llvm/llvm -B /llvm/build \
     -DLLVM_ENABLE_PROJECTS="clang" -DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi" \

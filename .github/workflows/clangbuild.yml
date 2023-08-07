@@ -1,4 +1,4 @@
-name: Static-Mex
+name: ClangBuilder
 
 on: 
   workflow_dispatch:

@@ -8,8 +8,8 @@ on:
   pull_request:
     branches:
       - main
-  schedule:
-    - cron: "0 0 * * *"
+  # schedule:
+  #   - cron: "0 0 * * *"
 
 jobs:
   builder:
@@ -20,7 +20,7 @@ jobs:
         - 16.0.0
         - 15.0.0
         debianversion:
-        - buster-slim
+        - bookworm-slim
         - bullseye-slim
     steps:
     - name: Set up QEMU
